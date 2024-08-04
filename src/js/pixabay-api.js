@@ -12,10 +12,12 @@ export const fetchImages = queryText => {
     per_page: 9,
   });
 
-  return fetch(`https://pixabay.com/api/?${searchParams}`).then(response => {
-    if (!response.ok) {
-      throw new Error(response.statusText);
-    }
-    return response.json();
-  });
+  return fetch(`https://pixabay.com/api/?${searchParams}`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+      return response.json();
+    })
+    .catch(error => console.log(error));
 };

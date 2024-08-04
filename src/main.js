@@ -15,8 +15,8 @@ let searhText = '';
 
 const onSearch = event => {
   event.preventDefault();
-  searchInput.value = searchInput.value.trim();
-  searhText = searchInput.value;
+  searhText = searchInput.value.trim();
+  searchInput.value = '';
 
   if (searhText === '') {
     iziToast.error({
