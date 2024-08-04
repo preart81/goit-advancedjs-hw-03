@@ -21,4 +21,4 @@ import{S as f,i as n}from"./assets/vendor-f33cd494.js";(function(){const e=docum
           </ul>
           </a>
         </div>`).join(""),g="Sorry, there are no images matching your search query. Please try again.",h=document.querySelector(".search-form"),i=document.querySelector(".search-text"),d=document.querySelector(".gallery"),u=document.querySelector(".loader");let s="";const S=l=>{if(l.preventDefault(),s=i.value.trim(),i.value="",s===""){n.error({position:"topRight",title:"Error",message:"Enter text"});return}d.innerHTML="",u.style.display="block",y(s).then(e=>{if(e.hits.length===0){n.error({position:"topRight",title:"Error",message:g});return}d.innerHTML=m(e.hits),L.refresh()}).catch(e=>{console.log(e)}).finally(()=>{u.style.display="none"})};h.addEventListener("submit",S);let L=new f(".gallery a",{captions:!0,captionsData:"alt",captionDelay:250,animationSpeed:150,fadeSpeed:150});
-//# sourceMappingURL=commonHelpers2.js.map
+//# sourceMappingURL=commonHelpers.js.map
